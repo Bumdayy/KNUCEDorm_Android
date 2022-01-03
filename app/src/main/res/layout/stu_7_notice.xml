@@ -11,13 +11,17 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <ImageView
+        <TextView
             android:id="@+id/logo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#bfbfbf"
-            android:src="@drawable/dorm_logo"
-            android:text="로고"></ImageView>
+            android:background="@color/stu_title"
+            android:text="KNU Dorm"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
     </LinearLayout>
 
     <FrameLayout

@@ -4,37 +4,50 @@
     package="com.bumday.dormitory">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:usesCleartextTraffic="true"
-        android:icon="@mipmap/ic_launcher_new"
+        android:icon="@mipmap/knudormicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:roundIcon="@mipmap/knudormicon_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name=".Stu_0_main"/>
-        <activity android:name=".Stu_1_inoutcheck"/>
-        <activity android:name=".Stu_2_sleepout"/>
-        <activity android:name=".Stu_3_community"/>
-        <activity android:name=".Stu_3_community_view"/>
-        <activity android:name=".Stu_3_community_write"/>
-        <activity android:name=".Stu_4_id"/>
-        <activity android:name=".Stu_5_scorecheck"/>
-        <activity android:name=".Stu_6_suggest"/>
-        <activity android:name=".Stu_7_notice"/>
+
+        <!-- 스플래시 액티비티 -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".Admin_0_main"/>
-        <activity android:name=".Admin_1_stuinfomng"/>
+        <activity android:name=".Admin_1_stuinfomng">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Admin_2_scanbarcord"/>
+        <activity android:name=".Admin_3_score"/>
+        <activity android:name=".Admin_4_sleepout"/>
+        <activity android:name=".Admin_5_inout"/>
+        <activity android:name=".Admin_6_suggest"/>
+        <activity android:name=".Admin_7_notice"/>
+        <activity android:name=".Stu_0_main"/>
+        <activity android:name=".Stu_1_id"/>
+        <activity android:name=".Stu_2_inoutcheck"/>
+        <activity android:name=".Stu_3_sleepout"/>
+        <activity android:name=".Stu_4_scorecheck"/>
+        <activity android:name=".Stu_5_suggest"/>
+        <activity android:name=".Stu_6_community"/>
+        <activity android:name=".Stu_6_community_view"/>
+        <activity android:name=".Stu_6_community_write"/>
+        <activity android:name=".Stu_7_notice"/>
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation"/>
         <activity android:name = ".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 </manifest>

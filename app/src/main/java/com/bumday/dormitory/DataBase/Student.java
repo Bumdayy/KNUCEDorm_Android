@@ -1,123 +1,98 @@
-package com.bumday.dormitory.DataBase;
+package com.bumday.dormitory.database;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import com.bumday.dormitory.Admin_1_stuinfomng;
 
-public class Student implements Parcelable
-{
-    String id;
-    String name;
-    String pw;
-    String address;
-    String major;
-    String phone;
-    String dom_kind;
-    String room;
-    public Student(){}
-    public Student(Parcel parcel) {
-        id = parcel.readString();
-        name = parcel.readString();
-        pw = parcel.readString();
-        address = parcel.readString();
-        major = parcel.readString();
-        phone = parcel.readString();
-        dom_kind = parcel.readString();
-        room = parcel.readString();
-    }
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    public static final Creator<Student> CREATOR = new Creator<Student>() {
-        @Override
-        public Student createFromParcel(Parcel in) {
-            return new Student(in);
-        }
+public class Student {
 
-        @Override
-        public Student[] newArray(int size) {
-            return new Student[size];
-        }
-    };
+    Admin_1_stuinfomng item;
 
-    public void setId(String id)
-    {
-        this.id=id;
-    }
-    public void setPw(String pw)
-    {
-       this.pw=pw;
-    }
-    public void setName(String name)
-    {
-        this.name=name;
-    }
-    public void setAddress(String address)
-    {
-        this.address=address;
-    }
-    public void setMajor(String major)
-    {
-        this.major=major;
-    }
-    public void setPhone(String phone)
-    {
-        this.phone=phone;
-    }
-    public void setDom(String dom_kind)
-    {
-        this.dom_kind=dom_kind;
-    }
-    public void setRoom(String room)
-    {
-        this.room=room;
-    }
+    private String id;
+    private String name;
+    private String pwd;
+    private String address;
+    private String major;
+    private String telnum;
+    private String dorm;
+    private String roomnum;
 
+    public String getid() {return id;}
+    public String getname() {return name;}
+    public String getpwd(){return pwd;}
+    public String getaddress() {return address;}
+    public String getmajor() {return major;}
+    public String gettelnum() {return telnum;}
+    public String getdorm() {return dorm;}
+    public String getroomnum() {return roomnum;}
 
-    public String getId()
-    {
-        return id;
-    }
-    public String getPw()
-    {
-        return pw;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    public String getAddress()
-    {
-        return address;
-    }
-    public String getMajor()
-    {
-        return major;
-    }
-    public String getPhone()
-    {
-        return phone;
-    }
-    public String getDom()
-    {
-        return dom_kind;
-    }
-    public String getRoom()
-    {
-        return room;
-    }
+    public void setid(String id) {this.id = id;}
+    public void setname(String name) {this.name = name;}
+    public void setpwd(String pwd) {this.pwd = pwd;}
+    public void setaddress(String address) {this.address = address;}
+    public void setmajor(String major) {this.major = major;}
+    public void settelnum(String telnum) {this.telnum = telnum;}
+    public void setdorm(String dorm) {this.dorm = dorm;}
+    public void setroomnum(String roomnum) {this.roomnum = roomnum;}
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
+//    private void jsonParsing(String json)
+//    {
+//        try{
+//            JSONObject jsonObject = new JSONObject(json);
+//
+//            JSONArray stuArray = jsonObject.getJSONArray("rows");
+//
+//            for(int i = 0; i <stuArray.length(); i++)
+//            {
+//                JSONObject stuObject = stuArray.getJSONObject(i);
+//
+//                Student stuinfo = new Student();
+//
+//                stuinfo.setid(stuObject.getString("id"));
+//                stuinfo.setname(stuObject.getString("name"));
+//                stuinfo.setpwd(stuObject.getString("pwd"));
+//                stuinfo.setaddress(stuObject.getString("address"));
+//                stuinfo.setmajor(stuObject.getString("major"));
+//                stuinfo.settelnum(stuObject.getString("telnum"));
+//                stuinfo.setdorm(stuObject.getString("dorm"));
+//                stuinfo.setroomnum(stuObject.getString("roomnum"));
+//
+////              items.add(stuinfo);
+//            }
+//        }catch(JSONException e){
+//            e.printStackTrace();
+//        }
+//    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.id);
-        dest.writeString(this.name);
-        dest.writeString(this.pw);
-        dest.writeString(this.address);
-        dest.writeString(this.major);
-        dest.writeString(this.phone);
-        dest.writeString(this.dom_kind);
-        dest.writeString(this.room);
-    }
+    // JSON 파싱해서 Admin_1_stuinfo에 List나열
+//    public void jsonParsing(String json)
+//    {
+//        try{
+//            JSONObject jsonObject = new JSONObject(json);
+//
+//            JSONArray stuArray = jsonObject.getJSONArray("rows");
+//
+//            for(int i = 0; i< stuArray.length(); i++)
+//            {
+//                JSONObject movieObject = stuArray.getJSONObject(i);
+//
+//                Student student = new Student();
+//
+//                student.setid(movieObject.getString("id"));
+//                student.setname(movieObject.getString("name"));
+//                student.setpwd(movieObject.getString("pwd"));
+//                student.setaddress(movieObject.getString("address"));
+//                student.setmajor(movieObject.getString("major"));
+//                student.settelnum(movieObject.getString("telnum"));
+//                student.setdorm(movieObject.getString("dorm"));
+//                student.setroomnum(movieObject.getString("roomnum"));
+//
+//                item.items.add("id :" + student.id );
+//            }
+//        }catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

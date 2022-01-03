@@ -17,6 +17,11 @@
     <string-array name="search_notice">
         <item>제목</item>
         <item>게시물번호</item>
+        <item>학번</item>
+    </string-array>
+    <string-array name="search_admin">
+        <item>학번</item>
+        <item>이름</item>
     </string-array>
     <string-array name="point">
         <item>전체</item>

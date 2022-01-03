@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Stu_7_notice extends FragmentActivity {
@@ -16,7 +17,7 @@ public class Stu_7_notice extends FragmentActivity {
         setContentView(R.layout.stu_7_notice);
 
         //로고 누르면, 메인화면으로 전환
-        ImageView logo = (ImageView) findViewById(R.id.logo);
+        TextView logo = (TextView) findViewById(R.id.logo);
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

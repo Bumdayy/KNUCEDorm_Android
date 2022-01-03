@@ -18,8 +18,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#fffdc0"
-                android:src="@drawable/dorm_logo"
+                android:background="#FFDB79"
+                android:src="@drawable/dorm_logo_admin"
+                android:padding="10dp"
                 android:text="로고" />
 
             <ImageView
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-        android:background="#d4e7e9">
+        android:background="#DBD4D2">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,28 +54,105 @@
                 android:layout_weight="3.2"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/stuinfomng"
+                <ImageView
+                    android:id="@+id/admin_1_stuinfomng"
+                    android:src="@drawable/admin_1_stuinfomng"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="#1c8db3"
-                    android:gravity="center"
-                    android:text="학생정보관리"
-                    android:textSize="30sp"></TextView>
+                    android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/scanbarcord"
+                <ImageView
+                    android:id="@+id/admin_2_scanbarcord"
+                    android:src="@drawable/admin_2_scanbarcord"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="#9049a7"
-                    android:gravity="center"
-                    android:text="관생증스캐너"
-                    android:textSize="30sp"></TextView>
+                    android:layout_weight="1"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/admin_3_score"
+                    android:src="@drawable/admin_3_score"
+                    android:padding="10dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/admin_4_sleepout"
+                    android:src="@drawable/admin_4_sleepout"
+                    android:padding="8dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/admin_5_inout"
+                    android:src="@drawable/admin_5_inout"
+                    android:padding="28dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/admin_6_suggest"
+                    android:src="@drawable/admin_6_suggest"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:gravity="center"
+                    android:text="관생증"
+                    android:textSize="30sp"></ImageView>
+
+                <ImageView
+                    android:id="@+id/admin_7_notice"
+                    android:src="@drawable/admin_7_notice"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="상벌점현황"
+                    android:textSize="26sp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.2"
+                android:gravity="top|center"
+                android:paddingTop="14dp"
+                android:text="[31080]충청남도 천안시 서북구천안대로 1223-24(부대동)\nCopyright(c)2019 Kongju National University Dormitory \n All Rights Reserved"
+                android:textColor="#000000" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

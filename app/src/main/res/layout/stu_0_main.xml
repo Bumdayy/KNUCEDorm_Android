@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -16,12 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#bfbfbf"
-                android:src="@drawable/dorm_logo"
-                android:text="로고" />
+                android:background="@color/stu_title"
+                android:text="KNU Dorm"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/logout"
@@ -54,91 +56,99 @@
                 android:layout_weight="3.2"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/stu_1_inoutcheck"
+                <ImageView
+                    android:id="@+id/stu_1_id"
+                    android:src="@drawable/stu_1_id"
+                    android:padding="40dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="#1c8db3"
-                    android:gravity="center"
-                    android:text="출입관리"
-                    android:textSize="40sp"></TextView>
+                    android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/stu_2_sleepout"
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:background="#9049a7"
-                    android:gravity="center"
-                    android:text="외박신청"
-                    android:textSize="40sp"></TextView>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/stu_2_inoutcheck"
+                        android:src="@drawable/stu_2_inoutcheck"
+                        android:padding="18dp"
+                        android:background="#F7F7F7"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:id="@+id/stu_3_sleepout"
+                        android:src="@drawable/stu_3_sleepout"
+                        android:padding="18dp"
+                        android:background="#F7F7F7"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2.2"
+                android:layout_weight="2"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <TextView
-                    android:id="@+id/stu_3_community"
+                <ImageView
+                    android:id="@+id/stu_4_scorecheck"
+                    android:src="@drawable/stu_4_scorecheck"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
                     android:layout_weight="1.25"
-                    android:background="#095926"
                     android:gravity="center"
                     android:text="커뮤니티"
-                    android:textSize="30sp"></TextView>
+                    android:textSize="30sp"></ImageView>
 
-                <TextView
-                    android:id="@+id/stu_4_id"
+                <ImageView
+                    android:id="@+id/stu_5_suggest"
+                    android:src="@drawable/stu_5_suggest"
+                    android:padding="16dp"
+                    android:background="#F7F7F7"
+                    android:layout_margin="4dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
                     android:layout_weight="0.75"
-                    android:background="#62740f"
                     android:gravity="center"
                     android:text="관생증"
-                    android:textSize="30sp"></TextView>
+                    android:textSize="30sp"></ImageView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.4"
+                android:layout_weight="1.8"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/stu_6_scorecheck"
+                <ImageView
+                    android:id="@+id/stu_6_community"
+                    android:src="@drawable/stu_6_community"
+                    android:padding="24dp"
+                    android:background="#F7F7F7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="0.8"
-                    android:background="#7e3700"
                     android:gravity="center"
                     android:text="상벌점현황"
-                    android:textSize="26sp"></TextView>
-
-                <TextView
-                    android:id="@+id/stu_7_suggest"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1.2"
-                    android:background="#8f1300"
-                    android:gravity="center"
-                    android:text="건의/연락처"
-                    android:textSize="26sp"></TextView>
+                    android:textSize="26sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/stu_8_notice"
+                android:id="@+id/stu_7_notice"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="8dp"
